@@ -58,15 +58,15 @@ public class Expense {
     }
 
     public void setCreatedAt(long createdAt) {
-        this.createdAt =  System.currentTimeMillis();
+        this.createdAt =  createdAt;
     }
 
 
 
-    public Expense( int categoryId, String title, double amount, long createdAt) {
+    public Expense( int categoryId, String title, double amount) {
         this.categoryId = categoryId;
         this.title = title;
         this.amount = amount;
-        this.createdAt = createdAt;
+        this.createdAt = System.currentTimeMillis();
     }
 }
